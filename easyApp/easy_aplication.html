@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> -EASY AJAX -</title>
+</head>
+<body>
+    <button onclick="sendRequest()">
+        Enviar peticion
+    </button>
+
+    <h1 id = "titulo">
+
+    </h1>
+   
+    <script>
+        function sendRequest(){
+           let obj = new XMLHttpRequest();
+           obj.open('POST','backend.php', true );
+           obj.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+           obj.onreadystatechange = function(){
+               document.getElementById('titulo').innerHTML = obj.responseText;
+           }
+           obj.send('username= Mr Developer');
+        }
+    </script>
+
+</body>
+</html>

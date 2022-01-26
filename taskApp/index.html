@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://bootswatch.com/5/lumen/bootstrap.min.css">
+    <title>TASK APP</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
+        <a href="#" class="navbar-brand">MR TASK APP</a>
+
+        <ul class="navbar-nav me-auto">
+           
+        </ul>
+        <form class="d-flex my-2 my-lg-0 mr-2"> 
+            <input type="search" id="search" class="form-control me-sm-2" placeholder="Search your task">
+            <button class="btn btn-success my-2 my-sm-0" type="submit">
+                Search
+            </button>
+
+        </form>
+
+    </nav>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Task Name"> <br>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="" id="description" cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea> <br>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center">
+                                Save Task
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card my-4" id="task-result">
+                    <div class="card-body">
+                        <ul id="container">
+
+                        </ul>
+                    </div>
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>NAME</td>
+                            <td>DESCRIPTION</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
