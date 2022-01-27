@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://bootswatch.com/5/lumen/bootstrap.min.css">
-    <title>TASK APP</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+    <link rel="shortcut icon" href="../Grizzly-Icon.ico" type="image/x-icon">
+    <title>TASK APP - GRIZZLY CODE</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary container-fluid">
-        <a href="#" class="navbar-brand">MR TASK APP</a>
+        <a href="#" class="navbar-brand">GRIZZLY CODE </a>
 
         <ul class="navbar-nav me-auto">
            
         </ul>
-        <form class="d-flex my-2 my-lg-0 mr-2"> 
+        <form class="d-flex my-2 my-lg-0 mr-2" id="searchbtn"> 
             <input type="search" id="search" class="form-control me-sm-2" placeholder="Search your task">
             <button class="btn btn-success my-2 my-sm-0" type="submit">
                 Search
@@ -30,6 +31,7 @@
                 <div class="card">
                     <div class="card-body">
                         <form id="task-form">
+                            <input type="hidden" id ="taskId">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" placeholder="Task Name"> <br>
                             </div>
@@ -57,6 +59,7 @@
                             <td>ID</td>
                             <td>NAME</td>
                             <td>DESCRIPTION</td>
+                            <td>ACTION</td>
                         </tr>
                     </thead>
                     <tbody id="tasks">
