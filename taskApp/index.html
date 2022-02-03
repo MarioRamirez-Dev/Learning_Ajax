@@ -16,13 +16,7 @@
         <ul class="navbar-nav me-auto">
            
         </ul>
-        <form class="d-flex my-2 my-lg-0 mr-1 p-1" id="searchbtn"> 
-            <input type="search" id="search" class="form-control me-sm-2" placeholder="Search your task">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">
-                Search
-            </button>
-
-        </form>
+       
 
     </nav>
     <div class="container p-4">
@@ -53,20 +47,31 @@
                         </ul>
                     </div>
                 </div>
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>NAME</td>
-                            <td>DESCRIPTION</td>
-                            <td>ACTION</td>
-                        </tr>
-                    </thead>
-                    <tbody id="tasks">
 
-                    </tbody>
+                <form class="d-flex my-2 my-lg-0 mr-2" id="searchbtn"> 
+                    <input type="search" id="search" class="form-control me-sm-2" placeholder="Search your task">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+        
+                </form>
+                <div class="table-responsive">                    
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <td>ID</td>
+                                <td>NAME</td>
+                                <td>DESCRIPTION</td>
+                                <td>ACTION</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tasks">
 
-                </table>
+                        </tbody>
+
+                    </table>
+                </div>
+
             </div>
         </div>
     </div>
