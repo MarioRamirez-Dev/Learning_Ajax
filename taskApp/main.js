@@ -2,6 +2,7 @@ $(document).ready(function(){
     let edit = false;
     fetchTasks();
     $('#task-result').hide();
+    //Function fot search while typing
     $('#search').keyup(function(){
         if ($('#search').val()){
             let search = $('#search').val();
@@ -25,7 +26,7 @@ $(document).ready(function(){
             })
         }
     });
-
+    //Function for insert data and updating data
     $('#task-form').submit(function(e){
         const postData = {
             name: $('#name').val(),
@@ -34,12 +35,12 @@ $(document).ready(function(){
         };
         e.preventDefault();
 
-        let url = edit === false ? 'taskAdd.php' : 'taskUpdate.php'
+        let url = edit === false ? 'taskAdd.php' : 'taskUpdate.php';
         
         $.post(url, postData, function(response){
             fetchTasks();
             $('#task-form').trigger('reset');
-
+            edit = false;
         })
     });
 
