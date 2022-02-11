@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-01-2022 a las 07:14:01
+-- Tiempo de generación: 11-02-2022 a las 23:19:11
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -30,15 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `task` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
-  `description` varchar(255) NOT NULL
+  `description` varchar(255) NOT NULL,
+  `create_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `update_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `task`
 --
 
-INSERT INTO `task` (`id`, `name`, `description`) VALUES
-(26, 'Crear Portafolio', 'Con proyectos, pero primero hacer portada');
+INSERT INTO `task` (`id`, `name`, `description`, `create_date`, `update_date`) VALUES
+(26, 'Crear Portafolio', 'Con proyectos, pero primero hacer portada', '2022-02-11 22:06:47', '2022-02-11 22:07:22'),
+(29, 'Implementacion de reportes', 'con fpdf', '2022-02-11 22:06:47', '2022-02-11 22:07:22'),
+(31, 'Finalizar reporte', 'antes de las siete y media', '2022-02-11 22:07:46', '2022-02-11 22:08:06');
 
 --
 -- Índices para tablas volcadas
@@ -58,7 +62,7 @@ ALTER TABLE `task`
 -- AUTO_INCREMENT de la tabla `task`
 --
 ALTER TABLE `task`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
